@@ -1,1 +1,1 @@
-# Wine_Appimage
+# Wine for Appimage
