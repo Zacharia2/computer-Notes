@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Wine-x86_64-ubuntu.20-04.AppImage
+Exec=/opt/bin/myapp
+Icon=image/icon.png
+Type=Application
+Categories=Utility;
