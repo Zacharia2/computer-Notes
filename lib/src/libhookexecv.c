@@ -30,6 +30,14 @@ static inline int strendswith( const char* str, const char* end )
     return len >= tail && !strcmp( str + len - tail, end );
 }
 
+// int execv(char *path, char ** argv)
+// exec函数族的6个函数原型其中一个。
+// exec是函数族提供了一个在进程中执行另一个进程的方法。
+// 它可以根据指定的文件名或目录名找到可执行文件，并用它来取代原调用进程的数据段、
+// 代码段和堆栈段，在执行完之后，原调用进程的内容除了进程号外，
+// 其他全部被新程序的内容替换了。另外，这里的可执行文件既可以是二进制文件，
+// 也可以是Linux下任何可执行脚本文件。
+
 // char *path = "$HERE/lib/ld-linux.so.2"
 // char ** argv  = "$HERE/opt/wine-stable/bin/wine" "$@"
 int execv(char *path, char ** argv)
