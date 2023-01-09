@@ -2,4 +2,4 @@
 
 wine-stable_7.0.1~jammy-1
 
-wine: could not load ntdll.so: /tmp/.mount_Wine-xYtYgfm/lib/i386-linux-gnu/../lib/wine/i386-unix/ntdll.so: cannot open shared object file: No such file or directory
+如何保证$HOME变量不变？不提权就可以了，权限跟用户绑定。
