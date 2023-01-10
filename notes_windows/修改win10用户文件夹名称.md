@@ -15,7 +15,7 @@
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\<你的sid>\
 
-![[/images/Pasted image 20230110162214.png]]
+![](修改win10用户文件夹名称-1.png)
 
 这样就修改完成了，接着退出你新建的管理员账户，登录你修改后的账户Ming即可
 

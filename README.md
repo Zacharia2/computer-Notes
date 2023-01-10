@@ -9,6 +9,7 @@ use vscode markdown edit or Obsidian edit
 - onenote尽可能不剪藏网页，非计算机内容。
 - 只要有这个感觉就可以了，计算机问题的解决方案一般可以在这里找到。少部分是看过的放在OneNote的网页剪藏。
 
+
 ## UNIX哲学
 
 >**Unix哲学**是一套基于[Unix操作系统](https://zh.wikipedia.org/wiki/Unix "Unix")顶级开发者们的经验提出的[软件开发](https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91 "软件开发")的准则和哲学。
