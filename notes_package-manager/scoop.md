@@ -161,11 +161,11 @@ scoop-backup 指定目录
 推荐配置
 bucket 管理
 查看 官方支持的 bucket
-scoop bucket known
+`scoop bucket known`
  
 
 查看 bucket 命令帮助
-scoop bucket help
+`scoop bucket help`
  
 
 添加 bucket

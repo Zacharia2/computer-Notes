@@ -1,4 +1,4 @@
-# WSL2 子系统、Hyper-V
+
 
 虽然 WSL 2 确实使用 VM，但 VM 是在幕后管理和运行的，因此你将具有与 WSL 1 相同的用户体验。
 
@@ -46,15 +46,12 @@ https://blog.csdn.net/S_ZaiJiangHu/article/details/127291863
 
 
 常用命令
-1. 列出已安装的 Linux 发行版，wsl -l -v。
-2. 安装新的 Linux 发行版时将默认版本设置为 WSL 1 或 WSL 2，请使用命令 wsl --set-default-version <Version#>，将 <Version#> 替换为 1 或 2。
-3. 设置与 wsl 命令一起使用的默认 Linux 发行版，wsl -s <DistributionName> ，将 <DistributionName> 替换为要使用的 Linux 发行版的名称。 例如，从 PowerShell/CMD 输入 wsl -s Debian，将默认发行版设置为 Debian。 现在从 Powershell 运行 wsl npm init 将在 Debian 中运行 npm init 命令。
-4. 要在 PowerShell 或 Windows 命令提示符下运行特定的 WSL 发行版而不更改默认发行版，请使用命令 wsl -d <DistributionName>，将 <DistributionName> 替换为要使用的发行版的名称。
+1. 列出已安装的 Linux 发行版，`wsl -l -v`。
+2. 安装新的 Linux 发行版时将默认版本设置为 WSL 1 或 WSL 2，请使用命令 `wsl --set-default-version <Version#>`，将 `<Version#>` 替换为 1 或 2。
+3. 设置与 wsl 命令一起使用的默认 Linux 发行版，`wsl -s <DistributionName>` ，将 `<DistributionName>` 替换为要使用的 Linux 发行版的名称。 例如，从 PowerShell/CMD 输入 `wsl -s Debian`，将默认发行版设置为 Debian。 现在从 Powershell 运行 `wsl npm init` 将在 Debian 中运行 npm init 命令。
+4. 要在 PowerShell 或 Windows 命令提示符下运行特定的 WSL 发行版而不更改默认发行版，请使用命令` wsl -d <DistributionName>`，将` <DistributionName>` 替换为要使用的发行版的名称。
 
 来自 < https://docs.microsoft.com/zh-cn/windows/wsl/install> 
-
-
-
 
 
 
@@ -62,8 +59,7 @@ https://blog.csdn.net/S_ZaiJiangHu/article/details/127291863
 	1. 安装包下载地址： https://docs.microsoft.com/zh-cn/windows/wsl/install-manual#downloading-distributions
 	2. 用压缩软件解压提取appxbundle文件中的Ubuntu_2004.2021.825.0_x64.appx
 	3. 解压Ubuntu_2004.2021.825.0_x64.appx文件，然后再解压的文件夹中找到ubuntu2004.exe，双击安装
-	4. wsl -l -v 验证安装。
-
+	4. `wsl -l -v `验证安装。
 
 
 
@@ -71,11 +67,14 @@ https://blog.csdn.net/S_ZaiJiangHu/article/details/127291863
 
 更换软件源
 为了提高我们安装软件的速度，我们先将apt的源修改为清华源，或者其它源，下面是更换为清华源的步骤：
-
+```shell
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
-        sudo nano /etc/apt/sources.list
+sudo nano /etc/apt/sources.list
+```
+
 将下面的内容粘贴到sources.list：
 
+```
 
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -92,6 +91,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 ```
 
+```sh
 sudo apt update
 
 wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2022.1_all.deb --no-check-certificate
@@ -99,14 +99,10 @@ https://mirrors.tuna.tsinghua.edu.cn/kali/pool/main/k/kali-archive-keyring/
 #清华大学
 deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
 deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
-
+```
 
 
 解决dpkg: warning: files list file for package ：重新安装apt-get reinstall "$package"
-
-
-
-
 
 
 Linux 报错Certificate verification failed: The certificate is NOT trusted.
@@ -118,47 +114,47 @@ Linux 报错Certificate verification failed: The certificate is NOT trusted.
 	4. 执行apt update更新，完成
 
 
-
-
-
 Ohmyzsh
 
 ohmyzsh主题： avit、bureau、agnoster、mortalscumbag、amuse
 powerlevel10k应该特别好，这个主题。
 
-sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
+`sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"`
 
-powerlevel10k：git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+powerlevel10k：`git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 主题名：powerlevel10k/powerlevel10k
 
-ls ~/.oh-my-zsh/themes
-ls ~/.oh-my-zsh/plugins
+`ls ~/.oh-my-zsh/themes`
+`ls ~/.oh-my-zsh/plugins`
 
  ~/.zshrc ：
 	1. plugins=(其他的插件 zsh-autosuggestions)
 	2. ZSH_THEME="主题名"
 
+
+```
 zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-synt
 ax-highlighting
+```
 
+```
 zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
 
 
+zsh主题pure：https://github.com/sindresorhus/pure#install
 
-
-
-
-zsh主题pure
-https://github.com/sindresorhus/pure#install
+```
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+```
 
-
-# .zshrc
+ .zshrc
+```
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
-
+```
 
