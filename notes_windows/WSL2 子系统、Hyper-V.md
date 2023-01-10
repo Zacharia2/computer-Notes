@@ -2,17 +2,18 @@
 
 虽然 WSL 2 确实使用 VM，但 VM 是在幕后管理和运行的，因此你将具有与 WSL 1 相同的用户体验。
 
-WSL 2 中的 Linux 内核是 Microsoft 根据最新的稳定版分支（基于 kernel.org 上提供的源代码）构建的
-此内核已专门针对 WSL 2 进行了调整，针对大小和性能进行了优化，以便在 Windows 上提供良好的 Linux 体验。 
+WSL 2 中的 Linux 内核是 Microsoft 根据最新的稳定版分支（基于 kernel.org 上提供的源代码）构建的。此内核已专门针对 WSL 2 进行了调整，针对大小和性能进行了优化，以便在 Windows 上提供良好的 Linux 体验。 
 
-WSL 1 使用的是由 WSL 团队构建的转换层
+WSL 1 使用的是由 WSL 团队构建的转换层。
 WSL 2 包括了自己的 Linux 内核，具有完全的系统调用兼容性。
+
 WSL1 提供与真实Linux内核类似的虚拟文件系统。在用户的系统上，我们提供了两个文件系统：VolFs 和 DriveFs。
 WSL2使用Ext4文件系统 ，9p文件传输协议。
 
 
 
 文件名：Hyper-V.cmd
+```cmd
 pushd "%~dp0"
 
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
@@ -22,11 +23,12 @@ for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /ad
 del hyper-v.txt
 
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+```
 
-- [x] Hyper-V  系统组软件
-- []适于Linux的Windows子系统
-- [x]虚拟机平台
-- [x]WSL2 Linux 内核更新包
+- [ ] Hyper-V  系统组软件
+- [ ] 适于Linux的Windows子系统
+- [ ] 虚拟机平台
+- [ ] WSL2 Linux 内核更新包
 
 - [x] 选中状态
 - [ ] 未选中状态
@@ -74,6 +76,7 @@ sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
         sudo nano /etc/apt/sources.list
 将下面的内容粘贴到sources.list：
 
+
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -87,6 +90,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # 预发布软件源，不建议启用
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+```
 
 sudo apt update
 
