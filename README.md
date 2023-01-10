@@ -30,3 +30,10 @@ use vscode markdown edit or Obsidian edit
 Accurate, interesting and limited human descriptions of superintelligents through good computer minds.
 
 透过优秀的计算机思想准确、有趣且有限的可描述超智能体的人类。
+
+
+## Form & Substance
+
+形式与实质 类似 物质与信息。
+
+信息记录在哪里，用什么格式记录，无论多少种载体，这些载体在什么位置，信息仅只有唯一一份。
