@@ -1,3 +1,4 @@
+```c
 #include <stdlib.h>
 #include <sys/ptrace.h>
 #include <sys/types.h>
@@ -126,3 +127,4 @@ int main(int argc, char ** argv)
     close(LD_fd);
     return 0;
 }
+```
