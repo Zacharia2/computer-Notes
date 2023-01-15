@@ -1,3 +1,5 @@
+把工具当做工具，而不是把工具当做玩具同时进行工作的双任务。
+
 笔记本安装的Linux，无论是Ubuntu，Fedora还是其他发行版，都是尝鲜，用来研究学习安装Linux以及入门可以，这个阶段你的重心在各种装软件，解决兼容，以及怎么正常使用社交软件，常用日常软件上。而不能正儿八经的把这个电脑作为工具，作为生产力输出。比如没法好好的做个视频、没法好好的写个[文档分享](https://www.zhihu.com/search?q=%E6%96%87%E6%A1%A3%E5%88%86%E4%BA%AB&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2378722403%7D)让别人正常读取，没法好好看片。
 
 笔记本来安装Linux，会让你用这个笔记本的初衷迷失在各种研究尝试上。
