@@ -1,6 +1,11 @@
 # scoop
 
-https://github.com/ScoopInstaller/Scoop
+> scoop必要组件： 7zip git innounp lessmsi dark sudo aria2
+> scoop我的CLI软件：ffmpeg 、pandoc
+>
+> main：https://github.com/ScoopInstaller/Scoop
+
+
 
 一、安装scoop
 - 将scoop安装到自定义目录
@@ -21,14 +26,16 @@ https://github.com/ScoopInstaller/Scoop
 二、配置scoop
 - scoop源配置: `scoop config SCOOP_REPO https://gitee.com/squallliu/scoop`
 
-
 软件仓库bucket源：
 软件源使用git版本管理，因此可以使用修改远程仓库的地址修改源地址加快速度。
+
+```shell
 cd $env:SCOOP\buckets\Main      
 git remote set-url origin http://hub.fastgit.org/ScoopInstaller/Main
 
 cd $env:SCOOP\buckets\Extras
 git remote set-url origin https://hub.fastgit.org/ScoopInstaller/Extras
+```
 
 
 
@@ -78,106 +85,54 @@ scoop bucket add scoopet 'https://hub.fastgit.org/ivaquero/scoopet'
 
 
 
-参考
-官方
-https://scoop.sh/ （介绍）
-https://github.com/lukesampson/scoop/wiki/Uninstalling-Scoop （卸载）
-博客
-https://sspai.com/post/52496 （「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件）
-https://hackettyu.com/2020-05-07-windows-scoop/ （Windows 下使用 Scoop 工具安装环境以及管理各种软件）
-https://www.xerrors.fun/scoop-list/#_4-常用软件清单 （Scoop 安装以及常用软件清单）
-https://github.com/KNOXDEV/scoop-backup （备份相关）
-https://blog.csdn.net/jinhaijing/article/details/85004126 （Win10系统PowerShell执行.ps1文件）
-声明
-环境是 Windows 10（Windows 7 已上都可以使用）；
-文章主要内容为 常用操作记录，不会过多涉及 Scoop 管理相关的概念。
-目录
-	• 安装（ 使用 powershell）
-	• 卸载（软件的使用权归自己所有，一言不合即卸载）
-	• 使用教程
-	• scoop 推荐设置
-scoop 安装&&卸载
+
+
 安装（ 使用 powershell）
 	1. 在 PowerShell 中输入下面内容，保证允许本地脚本的执行：（仅第一次安装前需要执行）
 	set-executionpolicy remotesigned -scope currentuser
- 
+
 	2. 然后执行下面的命令安装 Scoop：（稍微卡顿一些，等等就好）
 	iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
- 
+
 
 安装位置说明
 
 卸载（软件的使用权归自己所有，一言不合即卸载）
 注意： scoop 管理的软件都会卸载！！！
 scoop uninstall scoop
- 
 
 手动删除 scoop 文件（当前用户目录下，同安装目录）
-scoop 使用教程
-help 查看支持的命令
-scoop help
- 
 
-软件管理实战
-查找软件
-scoop search xxx软件包
- 
+help 查看支持的命令：scoop help
 
-安装软件
-scoop install xxx软件包
- 
 
-卸载软件
-scoop  uninstall xxx软件
- 
+查找软件：scoop search xxx软件包
 
-查看软件
-	1. 查看软件官方页
-	scoop home xxx软件
- 
-	
-	2. 查看软件详情
-	
-	3. 查看安装的软件列表
-	scoop list
- 
-	
-更新软件
-scoop update
- 
 
-查看软件列表
-scoop export >> xxx.txt
- 
+安装软件：scoop install xxx软件包
 
-（第三方）导出备份文件（ps 格式）power shell 格式
-scoop-backup 指定目录
- 
 
-（第三方）从备份列表中还原
-用 power shell 执行
-./backup-210314.ps1
- 
-推荐配置
-bucket 管理
-查看 官方支持的 bucket
-`scoop bucket known`
- 
+卸载软件：scoop  uninstall xxx软件
 
-查看 bucket 命令帮助
-`scoop bucket help`
- 
+查看软件官方页：scoop home xxx软件
 
-添加 bucket
-scoop bucket add xxxbucket
- 
+查看软件详情
 
-删除 bukcet
-scoop bucket rm xxx仓库
- 
-代理设置——目的：速度优化（难受的墙）TODO
-scoop config proxy 127.0.0.1:10809
- 
+查看安装的软件列表：scoop list
+
+
+更新软件：`scoop update`
+
+查看软件列表：`scoop export >> xxx.txt`
+
+查看 官方支持的 bucket：`scoop bucket known`
+
+查看 bucket 命令帮助：`scoop bucket help`
+
+添加 bucket：`scoop bucket add xxxbucket`
+
+删除 bukcet：：`scoop bucket rm xxx仓库`
+
 
 
 
