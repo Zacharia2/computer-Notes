@@ -4,6 +4,7 @@
 
 克隆子模块：`git clone --recursive https://github.com/L-M-Sherlock/supermemo.guru-cn.git`
 
+更新子模块：`git pull --recurse-submodules`
 
 ```yaml
 gitmodules文件
