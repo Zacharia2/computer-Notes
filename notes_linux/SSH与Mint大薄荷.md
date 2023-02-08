@@ -11,6 +11,9 @@ ssh结构 ：ssh和sshd
 
 服务器端：公共密钥认证、密钥交换、对称密钥加密、非安全连接。
 
+从远程到本地（本地视角）：scp -P12643 miao@1.tcp.cpolar.top:~/cpolar-stable-linux-amd64.zip C:\Users\whitefall
+
+从本地到远程（本地视角）：scp local_file remote_username@remote_ip:remote_folder
 
 ## 防火墙 ufw
 
