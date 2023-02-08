@@ -1,0 +1,20 @@
+## grep
+
+> Linux grep 命令用于查找文件里符合条件的字符串。
+
+https://www.runoob.com/linux/linux-comm-grep.html
+
+
+ps -e|grep ssh
+
+sudo apt list --installed|grep ssh
+
+> WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+>
+> apt命令不适合在脚本中运行，因为apt命令是为用户（人）而设计的，它会有颜色的显示、进度条显示等一些友好的交互界面。而在脚本中，对于这些“特性”是不稳定（不支持或者是输出错乱等）的。
+
+## sed
+
+> Linux sed 命令是利用脚本来处理文本文件。
+
+https://www.runoob.com/linux/linux-comm-sed.html
