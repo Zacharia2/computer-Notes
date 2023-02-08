@@ -69,48 +69,70 @@ Kerberos是一种计算机网络授权协议，用来在非安全网络中，对
 
 Include /etc/ssh/sshd_config.d/*.conf
 
-# Port：设置监听端口；ListenAddress，指定 sshd(8)监听的网络地址，默认监听所有地址。
+
+
+# Port：设置监听端口。
 # AddressFamily：指定 sshd(8) 应当使用哪种地址族。取值范围是："any"(默认)、"inet"(仅IPv4)、"inet6"(仅IPv6)。
+# ListenAddress，指定 sshd(8)监听的网络地址，默认监听所有地址。
+
 #Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
+
+
 
 # 设置私钥存储目录
 #HostKey /etc/ssh/ssh_host_rsa_key
 #HostKey /etc/ssh/ssh_host_ecdsa_key
 #HostKey /etc/ssh/ssh_host_ed25519_key
 
+
+
 # 密码和密钥 Ciphers and keying
 #RekeyLimit default none
 
+
+
 # 日志 Logging
-# LogLevel：设置日志级别；SyslogFacility：设置Syslog消息类型
+# SyslogFacility：设置Syslog消息类型。
+# LogLevel：设置日志级别。
+
 #SyslogFacility AUTH
 #LogLevel INFO
 
+
+
+
 # 认证 Authentication:
 
-# LoginGraceTime：限制用户必须在指定的时限内成功，0 表示无限制。默认值是 120 秒。
+# LoginGraceTime：认证时限，限制用户必须在指定的时限内成功，0 表示无限制。默认值是 120 秒。
 # PermitRootLogin：允许ROOT登录;StrictModes： 指定是否要求 sshd(8) 在接受连接请求前对用户主目录和相关的配置文件进行宿主和权限检查。
 # MaxAuthTries： 指定每个连接最大允许的认证次数。默认值是 6 。
 # MaxSessions：指定连接最大会话的数量。默认值是 10 。;
+
 #LoginGraceTime 2m
 #PermitRootLogin prohibit-password
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
 
+
 # 是否允许公钥认证。
 #PubkeyAuthentication yes
 
+
 # 预计将来默认忽略 .ssh/authorized_keys2
 #AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+
 
 #AuthorizedPrincipalsFile none
 
 #AuthorizedKeysCommand none
 #AuthorizedKeysCommandUser nobody
+
+
 
 # For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
 # 为此，您还需要 /etc/ssh/ssh_known_hosts 中的主机密钥
@@ -122,16 +144,20 @@ Include /etc/ssh/sshd_config.d/*.conf
 # 不要读取用户的 .rhosts 和 .shosts 文件
 #IgnoreRhosts yes
 
+
+
 # 密码验证设置
-# 密码认证：PasswordAuthentication；允许空密码：PermitEmptyPasswords
-# To disable tunneled clear text passwords, change to no here!
+# 密码认证：PasswordAuthentication；允许空密码：PermitEmptyPasswords。
 # 要禁用隧道明文密码，请在此处更改为否！
+
 #PasswordAuthentication yes
 #PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with some PAM modules and threads)
 # 是否允许质疑-应答(challenge-response)认证。（请注意某些 PAM 模块和线程的问题）
 ChallengeResponseAuthentication no
+
+
 
 # Kerberos options
 #KerberosAuthentication no
@@ -156,6 +182,8 @@ ChallengeResponseAuthentication no
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 
+
+
 # AllowTcpForwarding：是否允许TCP转发。GatewayPorts：是否允许远程主机连接本地的转发端口。
 # X11Forwarding：是否允许进行 X11 转发。PrintLastLog：显示上次登入的信息!
 # TCPKeepAlive：指定系统是否向客户端发送 TCP keepalive 消息。
@@ -172,6 +200,7 @@ PrintMotd no
 #TCPKeepAlive yes
 #PermitUserEnvironment no
 
+
 # Compression：是否可以使用压缩指令?
 # UseDNS：指定 sshd(8) 是否应该对远程名进行反向解析，以检查此主机名是否与其IP地址真实对应。
 # PidFile：指定在哪个文件中存放SSH守护进程的进程号
@@ -187,17 +216,25 @@ PrintMotd no
 #ChrootDirectory none
 #VersionAddendum none
 
+
+
 # no default banner path
 # 将这个指令指定的文件中的内容在用户进行认证前显示给远程用户。"none"表示禁用这个特性。
 #Banner none
+
+
 
 # Allow client to pass locale environment variables
 # 指定客户端发送的哪些环境变量将会被传递到会话环境中。指令的值是空格分隔的变量名列表(其中可以使用'*'和'?'作为通配符)。
 AcceptEnv LANG LC_*
 
+
+
 # override default of no subsystems
 # 配置一个外部子系统(例如，一个文件传输守护进程)。值是一个子系统的名字和对应的命令行(含选项和参数)。
 Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+
 
 # Example of overriding settings on a per-user basis
 # 基于每个用户重写设置的示例
