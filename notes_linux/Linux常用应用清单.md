@@ -123,7 +123,12 @@ Apifox：API 文档、API 调试、API Mock、API 自动化测试
 16. 笔记草稿（手写）软件： Xournal++（全平台，包名：xournalpp）/  Lorien /Rnote( 正在开发中 )
 
 
-
+**NAS软件**
+1. jellyfin（https://jellyfin.org/downloads/server）
+	- Open Subtitles（字幕插件）
+	- Kodi Sync Queue（KODI串流）
+	- systemctl status/restart jellyfin
+	- https://post.smzdm.com/p/a07omlr8/
 
 
 **命令行软件**
