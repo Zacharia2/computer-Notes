@@ -8,3 +8,9 @@
 	3. 修改/.git/config 文件 url 字段为仓库Clone选项中的ssh连接。
 
 大功告成。
+
+
+
+git config --global user.name "Zacharia2"
+
+git config --global user.email "1947114574@qq.com"
