@@ -1,6 +1,10 @@
 # Linux系统首选：Linux Mint大薄荷
 DEB系备选deepin、 Ubuntukylin、openKylin、Batocera/RetroBat（游戏系统）、nixos（配置管理包系统）。
 
+
+> linux服务器或VPS对我一点用都没，除非我用的软件或服务需要自建服务器，否则日常使用的方式都比服务器简单不少。
+
+
 输入法：manjaro-asian-input-support-fcitx5（manjaro配置好的输入法包），ibus-rime，fcitx5-rime，大薄荷已经配置好fcitx-sunpinyin等中文输入法。（如果出现依赖错误，就直接删除fcitx的所有软件包从新安装就可解决）
 
 桌面环境：Cinnamon（简单、稳定高效），GNOME42
@@ -18,7 +22,6 @@ DEB系备选deepin、 Ubuntukylin、openKylin、Batocera/RetroBat（游戏系统
 
 SysMonTask: 一个具有 Windows 任务管理器外观的系统监控器
 
-SwitchHosts：hosts解析管理工具，支持直接对host文件进行编辑，添加自己的host解析规则，支持在多个host方案直接快速的切换，如解决GitHub速度慢的问题——GitHub520。
 
 常用的字体，以及字体包。可以拷贝Win系统。推荐的字体：方正书宋、霞鹜文楷
 
@@ -100,6 +103,8 @@ Apifox：API 文档、API 调试、API Mock、API 自动化测试
 43. 用sigil矫正一下目录（epub编辑器）
 44. caddy webdav与http服务器。
 45. 纯文本比对软件，Meld
+46. SwitchHosts：hosts解析管理工具，支持直接对host文件进行编辑，添加自己的host解析规则，支持在多个host方案直接快速的切换，如解决GitHub速度慢的问题——GitHub520。
+47. 开发者边车。
 
 
 
@@ -184,10 +189,9 @@ Linux 报错Certificate verification failed: The certificate is NOT trusted.
 
 
 
-
 Linux软件安装好安装知道名字就可以了，就是卸载不好卸载，只能一个个的盲目地卸载或者卸载依赖尤其是编译时安装的依赖，软件编译好了，系统环境被污染的严重，而且不够直观，如果有软件可以按类别卸载就好了。。。。。。
 
-appimage打包，建议不要使用源码编译收集文件，不如使用人家编译好的二进制包deb，rpm，然后使用解压命令将所有二进制包以及需要的依赖系统依赖全部解压到指定目录，然后打包成为appimage使用。
+
 
 -----
 
